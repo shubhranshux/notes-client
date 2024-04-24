@@ -1,22 +1,23 @@
 import React from "react";
-import Home from "./containers/Home";
-import NotFound from "./containers/NotFound"; // Import the NotFound component
 import { Routes, Route } from 'react-router-dom';
+import NewNote from "./containers/NewNote";
+import Home from "./containers/Home";
+import NotFound from "./containers/NotFound";
+import Login from "./containers/Login";
+import Signup from "./containers/Signup";
+import Notes from "./containers/Notes";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
+import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 
 export default function MyRoutes() {
     return (
-        <>
-            <header>
-                {/* Include the NotFound component in the header */}
-                <NotFound />
-            </header>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                {/* Other routes */}
-                {/* Finally, catch all unmatched routes */}
-                {/* Place the Switch block as the last line in the Routes section */}
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <UnauthenticatedRoute exact path="/login" element={<Login />} />
+            <UnauthenticatedRoute exact path="/signup" element={<Signup />} />
+            <AuthenticatedRoute exact path="/notes/new" element={<NewNote />} />
+            <AuthenticatedRoute exact path="/notes/:id" element={<Notes />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
     );
 }
