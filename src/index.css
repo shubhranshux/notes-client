@@ -6,15 +6,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "PT Serif", serif;
-    }
-    select.form-control,
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Serif", serif;
+}
+
+select.form-control,
 textarea.form-control,
 input.form-control {
-font-size: 1rem;
+  font-size: 1rem;
 }
+
 input[type=file] {
-width: 100%;
+  width: 100%;
+}
+
+/* 3D multi-variant color effect */
+body {
+  background: linear-gradient(45deg, #ff5733, #d12710, #f4c2c2, #ece3d2, #fcf7bb);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
