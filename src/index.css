@@ -1,3 +1,11 @@
+@keyframes changeColors {
+  0% { background-color: #79d4e0; }
+  25% { background-color: #63a8b1; }
+  50% { background-color: #89c6a3; }
+  75% { background-color: #a1d2b5; }
+  100% { background-color: #a3c6cc; }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
+  animation: changeColors 20s infinite alternate; /* Change colors every 20 seconds */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,8 +31,8 @@ input[type=file] {
   width: 100%;
 }
 
-/* 3D multi-variant color effect */
+/* Calming color effect */
 body {
-  background: linear-gradient(45deg, #ff5733, #d12710, #f4c2c2, #ece3d2, #fcf7bb);
+  background-color: #79d4e0; /* Initial color */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
