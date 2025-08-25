@@ -43,13 +43,13 @@ export default function Notes() {
     return content.length > 0;
   }
 
-  function formatFilename(str) {
-    return str.replace(/^\w+-/, "");
-  }
+  // function formatFilename(str) {
+  //   return str.replace(/^\w+-/, "");
+  // }
 
-  function handleFileChange(event) {
-    file.current = event.target.files[0];
-  }
+  // function handleFileChange(event) {
+  //   file.current = event.target.files[0];
+  // }
 
   async function saveNote(note) {
     return API.put("notes", `/notes/${id}`, {
@@ -117,7 +117,7 @@ export default function Notes() {
               className="notes-textarea" // Added className for styling
             />
           </Form.Group>
-          <Form.Group controlId="file">
+          {/* <Form.Group controlId="file">
             <Form.Label>Attachment</Form.Label>
             {note.attachment && (
               <p>
@@ -131,7 +131,7 @@ export default function Notes() {
               </p>
             )}
             <Form.Control onChange={handleFileChange} type="file" />
-          </Form.Group>
+          </Form.Group> */}
           <LoaderButton
             block
             size="lg"

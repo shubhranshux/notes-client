@@ -19,9 +19,9 @@ export default function NewNote() {
         return content.length > 0;
     }
 
-    function handleFileChange(event) {
-        file.current = event.target.files[0];
-    }
+    // function handleFileChange(event) {
+    //     file.current = event.target.files[0];
+    // }
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -64,10 +64,10 @@ export default function NewNote() {
                         onChange={(e) => setContent(e.target.value)}
                     />
                 </Form.Group>
-                <Form.Group controlId="file">
+                {/* <Form.Group controlId="file">
                     <Form.Label>Attachment</Form.Label>
                     <Form.Control onChange={handleFileChange} type="file" />
-                </Form.Group>
+                </Form.Group> */}
                 <LoaderButton
                     block
                     type="submit"
